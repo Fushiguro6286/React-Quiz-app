@@ -1,0 +1,198 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(#D8C7FF, #19006C);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 640px;
+  max-width: 95%;
+  margin: auto;
+  background: #fff;
+  color: #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 15px;
+  padding: 40px 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container hr {
+  height: 2px;
+  border: none;
+  background: #707070;
+  border-radius: 2px;
+}
+
+/* ================= HEADINGS ================= */
+.container h1 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: #19006C;
+}
+
+.container h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.container h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #553f9a;
+}
+
+/* ================= SUBJECT BUTTONS ================= */
+.paper-select button,
+.container button {
+  margin: 10px auto;
+  width: 250px;
+  max-width: 90%;
+  height: 65px;
+  background: #553f9a;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paper-select button:hover,
+.container button:hover {
+  background: #3b2b7a;
+  transform: translateY(-3px);
+}
+
+/* ================= OPTIONS LIST ================= */
+.container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding-left: 20px;
+  border: 2px solid #686868;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.container ul li:hover {
+  background-color: #f0f0ff;
+  border-color: #553f9a;
+  transform: translateY(-2px);
+}
+
+/* ================= CORRECT / WRONG STATES ================= */
+.container .correct {
+  background-color: #dfffe6;
+  border-color: #00d397;
+}
+
+.container .wrong {
+  background: #FFEBEB;
+  border-color: #FF4A4A;
+}
+
+/* ================= PROGRESS BAR ================= */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #553f9a;
+  transition: width 0.4s ease-in-out;
+}
+
+/* ================= INDEX / SCORE ================= */
+.container .index {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* ================= SOLUTION BOX ================= */
+.solution-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f5f5ff;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #333;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 720px) {
+  .container {
+    padding: 30px 25px;
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+
+  .container h3 {
+    font-size: 18px;
+  }
+
+  .container ul li {
+    font-size: 18px;
+    height: 60px;
+    padding-left: 15px;
+  }
+
+  .container button,
+  .paper-select button {
+    font-size: 20px;
+    height: 55px;
+  }
+}
+
+/* ================= OPTIONAL: TRANSITIONS ================= */
+.container ul li,
+.container button {
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
+}
